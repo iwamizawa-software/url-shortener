@@ -6,6 +6,9 @@
   "default_locale": "ja",
   "browser_action": {
   },
+  "icons": {
+      "128": "icon.png"
+  },
   "background": {
     "scripts": ["url-shortener.js"]
   }
