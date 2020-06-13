@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "URL短縮"
+  },
+  "extDescription": {
+    "message": "URLを短縮しクリップボードにコピーする"
+  }
+}

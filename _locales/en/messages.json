@@ -1,0 +1,8 @@
+{
+  "extName": {
+    "message": "URL Shortener"
+  },
+  "extDescription": {
+    "message": "Copy shorten URL to clipboard"
+  }
+}
