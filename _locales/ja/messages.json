@@ -4,5 +4,11 @@
   },
   "extDescription": {
     "message": "URLを短縮しクリップボードにコピーする"
+  },
+  "failed": {
+    "message": "短縮失敗"
+  },
+  "copied": {
+    "message": "コピー完了"
   }
 }

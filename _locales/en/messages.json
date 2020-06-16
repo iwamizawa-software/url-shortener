@@ -4,5 +4,11 @@
   },
   "extDescription": {
     "message": "Copy shorten URL to clipboard"
+  },
+  "failed": {
+    "message": "failed to shorten"
+  },
+  "copied": {
+    "message": "copied URL to clipboard"
   }
 }
