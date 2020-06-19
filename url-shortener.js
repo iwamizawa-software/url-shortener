@@ -25,7 +25,7 @@
   };
   var shorten;
   chrome.browserAction.onClicked.addListener(function (tab) {
-    var url = tab.url || tab.pendingUrl;
+    var url = tab.url || tab.pendingUrl, title = tab.title || url;
     var APIList = chrome.runtime.getManifest().permissions.slice(3);
     (shorten = function s() {
       if (s !== shorten)
@@ -42,7 +42,7 @@
         input.select();
         document.execCommand('copy');
         document.body.removeChild(input);
-        msg(tab.title || url, chrome.i18n.getMessage('copied'));
+        msg(title, chrome.i18n.getMessage('copied'));
       }, s);
     })();
   });
