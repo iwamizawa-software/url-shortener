@@ -23,17 +23,17 @@
     xhr.onerror = error;
     xhr.send();
   };
-  var shorten;
-  chrome.browserAction.onClicked.addListener(function (tab) {
+  var shorten, onclick = function (tab) {
     var url = tab.url || tab.pendingUrl, title = tab.title || url;
-    var APIList = chrome.runtime.getManifest().permissions.slice(3);
+    if (url.indexOf('http'))
+      return msg(chrome.i18n.getMessage('failed'));
+    var permissions = chrome.runtime.getManifest().permissions;
+    var APIList = permissions.slice(permissions.findIndex(s=>!s.indexOf('http')));
     (shorten = function s() {
       if (s !== shorten)
         return;
-      if (!APIList.length) {
-        msg(chrome.i18n.getMessage('failed'));
-        return;
-      }
+      if (!APIList.length)
+        return msg(chrome.i18n.getMessage('failed'));
       Ajax(APIList.shift() + encodeURIComponent(url), function (result) {
         if (s !== shorten)
           return;
@@ -45,5 +45,12 @@
         msg(title, chrome.i18n.getMessage('copied'));
       }, s);
     })();
+  };
+  chrome.browserAction.onClicked.addListener(onclick);
+  chrome.contextMenus.create({
+    title: chrome.i18n.getMessage('extName'),
+    onclick: function (info, tab) {
+      onclick(tab);
+    }
   });
 }();
