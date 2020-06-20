@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "URL 단축"
+  },
+  "extDescription": {
+    "message": "URL를 단축하고 클립보드에 카피한다"
+  },
+  "failed": {
+    "message": "단축 실패"
+  },
+  "copied": {
+    "message": "카피 완료"
+  }
+}

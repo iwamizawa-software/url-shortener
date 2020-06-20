@@ -3,7 +3,7 @@
   "version": "1",
   "manifest_version": 2,
   "description": "__MSG_extDescription__",
-  "default_locale": "ja",
+  "default_locale": "en",
   "browser_action": {
   },
   "icons": {
