@@ -1,6 +1,6 @@
 # URL Shortener
 ## How to install
-1. <a href="../archive/master.zip">Download ZIP</a> and unzip
+1. [Download ZIP](https://github.com/iwamizawa-software/url-shortener/archive/master.zip) and unzip
 2. Open chrome://extensions/
 3. Enable developer mode
 4. Drag the unziped folder and drop it on extensions page
