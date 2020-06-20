@@ -1,4 +1,4 @@
-# URL Shortener
+# URL Shortener WebExtensions
 ## How to install
 1. [Download ZIP](https://github.com/iwamizawa-software/url-shortener/archive/master.zip) and unzip
 2. Open chrome://extensions/
